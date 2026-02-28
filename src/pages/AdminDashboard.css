@@ -1,0 +1,330 @@
+/* ===== ADMIN LOGIN ===== */
+.admin-login-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #05080a;
+    padding: 20px;
+}
+
+.admin-login-box {
+    background: #0a0f1e;
+    padding: 40px;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 255, 153, 0.3);
+    box-shadow: 0 0 20px rgba(0, 255, 153, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+.admin-login-box h2 {
+    color: #ff4444;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+    font-size: 20px;
+}
+
+.admin-login-box input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.admin-login-box input:focus {
+    outline: none;
+    border-color: #00ff99;
+    box-shadow: 0 0 10px rgba(0, 255, 153, 0.2);
+}
+
+.admin-login-box button {
+    width: 100%;
+    padding: 15px;
+    background: #00ff99;
+    color: #000;
+    border: none;
+    border-radius: 6px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.admin-login-box button:hover {
+    background: #fff;
+    box-shadow: 0 0 15px rgba(0, 255, 153, 0.5);
+}
+
+/* ===== ADMIN DASHBOARD LAYOUT ===== */
+.admin-dashboard {
+    display: flex;
+    min-height: 100vh;
+    background: #05080a;
+    color: #fff;
+}
+
+/* Sidebar */
+.admin-sidebar {
+    width: 250px;
+    background: #0a0f1e;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.admin-sidebar h2 {
+    color: #00ff99;
+    font-size: 24px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.admin-sidebar button {
+    background: transparent;
+    color: #aaa;
+    border: 1px solid transparent;
+    padding: 12px 15px;
+    text-align: left;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+.admin-sidebar button:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: #fff;
+}
+
+.admin-sidebar button.active {
+    background: rgba(0, 255, 153, 0.1);
+    color: #00ff99;
+    border-color: rgba(0, 255, 153, 0.3);
+}
+
+/* Content Area */
+.admin-content {
+    flex: 1;
+    padding: 40px;
+}
+
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.admin-header h1 {
+    font-size: 32px;
+    color: #fff;
+}
+
+.add-btn {
+    background: #00ff99;
+    color: #000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.add-btn:hover {
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 255, 153, 0.5);
+}
+
+/* Tables */
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #0a0f1e;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.admin-table th,
+.admin-table td {
+    padding: 15px 20px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.admin-table th {
+    background: rgba(255, 255, 255, 0.05);
+    color: #aaa;
+    font-weight: normal;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.admin-table tr:hover {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.admin-table td {
+    color: #ddd;
+    font-size: 14px;
+}
+
+.edit-btn {
+    background: #2a3b5c;
+    color: #fff;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+    font-size: 12px;
+    transition: background 0.2s;
+}
+
+.edit-btn:hover {
+    background: #3b507a;
+}
+
+.delete-btn {
+    background: rgba(255, 68, 68, 0.1);
+    color: #ff4444;
+    border: 1px solid #ff4444;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: all 0.2s;
+}
+
+.delete-btn:hover {
+    background: #ff4444;
+    color: #fff;
+}
+
+/* ===== MODAL OVERLAY ===== */
+.admin-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.admin-modal-content {
+    background: #0a0f1e;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 255, 153, 0.3);
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 0 30px rgba(0, 255, 153, 0.1);
+}
+
+.admin-modal-content h2 {
+    color: #00ff99;
+    margin-bottom: 20px;
+}
+
+.admin-form .form-group {
+    margin-bottom: 15px;
+}
+
+.admin-form .form-row {
+    display: flex;
+    gap: 15px;
+}
+
+.admin-form .form-row .form-group {
+    flex: 1;
+}
+
+.admin-form label {
+    display: block;
+    color: #aaa;
+    margin-bottom: 5px;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.admin-form input,
+.admin-form textarea {
+    width: 100%;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    color: #fff;
+    font-family: inherit;
+}
+
+.admin-form textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+.admin-form input:focus,
+.admin-form textarea:focus {
+    outline: none;
+    border-color: #00ff99;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.cancel-btn {
+    background: transparent;
+    color: #aaa;
+    border: 1px solid #aaa;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.cancel-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.save-btn {
+    background: #00ff99;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.save-btn:hover {
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 255, 153, 0.5);
+}

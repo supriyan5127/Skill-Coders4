@@ -1,0 +1,86 @@
+/* Reuse your existing modal-overlay, modal-content, glitch, etc. */
+/* Add these specific styles if not already present */
+
+.course-info {
+  color: #00ff99;
+  margin-bottom: 20px;
+  font-size: 18px;
+  text-align: center;
+  text-shadow: 0 0 5px #00ff99;
+}
+
+/* Error styles */
+.form-group input.error,
+.form-group textarea.error {
+  border-color: #ff4444;
+  box-shadow: 0 0 15px #ff4444;
+}
+
+.error-text {
+  color: #ff4444;
+  font-size: 12px;
+  margin-top: 5px;
+  display: block;
+  text-align: left;
+  text-shadow: 0 0 5px #ff4444;
+}
+
+/* Success message (if you don't have it already) */
+.success-message {
+  text-align: center;
+  padding: 40px 20px;
+  background: rgba(0, 255, 153, 0.05);
+  border-radius: 30px;
+  border: 2px solid #00ff99;
+  box-shadow: 0 0 30px #00ff99, 0 0 60px #00ff99 inset;
+  animation: successPop 0.5s ease;
+}
+
+.success-icon {
+  font-size: 80px;
+  color: #00ff99;
+  text-shadow: 0 0 20px #00ff99;
+  animation: iconScale 0.5s ease;
+}
+
+.success-text {
+  font-size: 24px;
+  color: #fff;
+  text-shadow: 0 0 10px #00ff99;
+  margin: 20px 0;
+}
+
+.glow-text {
+  color: #00ff99;
+  font-weight: bold;
+  text-decoration: underline wavy #00ff99;
+}
+
+.success-close-btn {
+  background: transparent;
+  border: 2px solid #00ff99;
+  color: #00ff99;
+  padding: 12px 40px;
+  border-radius: 40px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 0 15px #00ff99;
+}
+
+.success-close-btn:hover {
+  background: #00ff99;
+  color: #0a0f1e;
+}
+
+@keyframes successPop {
+  0% { transform: scale(0.8); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes iconScale {
+  0% { transform: scale(0); }
+  80% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
