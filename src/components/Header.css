@@ -38,4 +38,29 @@
 
 .nav a:hover {
   color: #007bff;
+}\n
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .nav ul { gap: 15px; }
+  .nav a { font-size: 14px; }
+}
+@media (max-width: 480px) {
+  .header-container { flex-direction: column; gap: 15px; }
+  .nav ul { flex-wrap: wrap; justify-content: center; }
+}
+\n
+/* ===== GLOBAL MOBILE OVERFLOW FIX ===== */
+@media (max-width: 480px) {
+  .container, 
+  [class*="-container"], 
+  section,
+  .hero,
+  .footer,
+  .cyber-battle,
+  .about {
+    width: 100% !important;
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+    box-sizing: border-box !important;
+  }
 }

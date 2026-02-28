@@ -262,4 +262,31 @@
   .about p {
     font-size: 16px;
   }
+}\n
+/* ===== ADDITIONAL RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .about h3 { font-size: 36px; }
+  .content-card { padding: 35px 40px; }
+}
+@media (max-width: 480px) {
+  .about { padding: 60px 15px; }
+  .about h3 { font-size: 28px; }
+  .content-card { padding: 25px 15px; }
+  .about p { font-size: 15px; }
+}
+\n
+/* ===== GLOBAL MOBILE OVERFLOW FIX ===== */
+@media (max-width: 480px) {
+  .container, 
+  [class*="-container"], 
+  section,
+  .hero,
+  .footer,
+  .cyber-battle,
+  .about {
+    width: 100% !important;
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+    box-sizing: border-box !important;
+  }
 }

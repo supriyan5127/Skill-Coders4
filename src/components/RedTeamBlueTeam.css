@@ -343,4 +343,33 @@
   .team { max-width: 100%; }
   .prize { font-size: 18px; padding: 15px 30px; }
   .cyber-battle .btn { font-size: 20px; padding: 14px 40px; }
+}\n
+/* ===== ADDITIONAL RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .teams-container { gap: 30px; }
+  .team { padding: 35px 20px; }
+}
+@media (max-width: 480px) {
+  .cyber-battle { padding: 50px 15px; }
+  .cyber-battle h2 { font-size: 32px; }
+  .subtitle { font-size: 18px; }
+  .description { font-size: 15px; }
+  .team h3 { font-size: 28px; }
+  .team p { font-size: 14px; }
+}
+\n
+/* ===== GLOBAL MOBILE OVERFLOW FIX ===== */
+@media (max-width: 480px) {
+  .container, 
+  [class*="-container"], 
+  section,
+  .hero,
+  .footer,
+  .cyber-battle,
+  .about {
+    width: 100% !important;
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+    box-sizing: border-box !important;
+  }
 }

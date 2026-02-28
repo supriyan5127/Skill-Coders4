@@ -5,6 +5,9 @@
   min-height: 100vh;
   position: relative;
   overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
+  box-sizing: border-box;
 }
 
 /* Hero Section with animated gradient */
@@ -108,6 +111,9 @@
 
 /* Category Titles with rotating glow */
 .category-section {
+  width: 100%;
+  max-width: 100vw;
+  overflow: hidden;
   margin-bottom: 80px;
   position: relative;
 }
@@ -148,6 +154,9 @@
 
 /* Gadgets Grid */
 .gadgets-grid {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
@@ -354,5 +363,20 @@
 @media (max-width: 480px) {
   .gadgets-grid {
     grid-template-columns: 1fr;
+  }
+}\n
+/* ===== GLOBAL MOBILE OVERFLOW FIX ===== */
+@media (max-width: 480px) {
+  .container, 
+  [class*="-container"], 
+  section,
+  .hero,
+  .footer,
+  .cyber-battle,
+  .about {
+    width: 100% !important;
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+    box-sizing: border-box !important;
   }
 }
