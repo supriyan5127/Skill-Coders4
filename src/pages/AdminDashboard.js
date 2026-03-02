@@ -249,34 +249,34 @@ const AdminDashboard = () => {
                                         <tr key={item.id}>
                                             {activeTab === 'contact_messages' ? (
                                                 <>
-                                                    <td>{item.fullName}</td>
-                                                    <td>
+                                                    <td data-label="Name">{item.fullName}</td>
+                                                    <td data-label="Contact Info">
                                                         <div>{item.email}</div>
                                                         <div style={{ fontSize: '0.85em', color: '#ccc' }}>{item.phone}</div>
                                                     </td>
-                                                    <td style={{ maxWidth: '300px' }}>{item.message}</td>
-                                                    <td>
+                                                    <td data-label="Message" style={{ maxWidth: '300px' }}>{item.message}</td>
+                                                    <td data-label="Actions">
                                                         <button className="delete-btn" onClick={() => handleDelete(item.id)}>Delete</button>
                                                     </td>
                                                 </>
                                             ) : activeTab === 'enrollments' ? (
                                                 <>
-                                                    <td>{item.fullName}</td>
-                                                    <td>
+                                                    <td data-label="Name">{item.fullName}</td>
+                                                    <td data-label="Contact Info">
                                                         <div>{item.email}</div>
                                                         <div style={{ fontSize: '0.85em', color: '#ccc' }}>{item.phone}</div>
                                                     </td>
-                                                    <td style={{ maxWidth: '200px' }}>{item.course}</td>
-                                                    <td style={{ maxWidth: '300px' }}>{item.message}</td>
-                                                    <td>
+                                                    <td data-label="Course/Item" style={{ maxWidth: '200px' }}>{item.course}</td>
+                                                    <td data-label="Message" style={{ maxWidth: '300px' }}>{item.message}</td>
+                                                    <td data-label="Actions">
                                                         <button className="delete-btn" onClick={() => handleDelete(item.id)}>Delete</button>
                                                     </td>
                                                 </>
                                             ) : (
                                                 <>
-                                                    <td>{item.title || item.name}</td>
-                                                    <td>{item.category}</td>
-                                                    <td>
+                                                    <td data-label="Title/Name">{item.title || item.name}</td>
+                                                    <td data-label="Category">{item.category}</td>
+                                                    <td data-label="Actions">
                                                         <button className="edit-btn" onClick={() => handleOpenModal(item)}>Edit</button>
                                                         <button className="delete-btn" onClick={() => handleDelete(item.id)}>Delete</button>
                                                     </td>
