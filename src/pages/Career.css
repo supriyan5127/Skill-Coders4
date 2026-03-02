@@ -1,3 +1,4 @@
+*, *::before, *::after { box-sizing: border-box; }
 .career-page {
   background: #0a0f1e;
   min-height: 100vh;
@@ -111,7 +112,7 @@
 
 .search-input {
   flex: 1;
-  min-width: 250px;
+  min-width: 100%;
   padding: 15px 20px;
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(0, 255, 255, 0.3);
@@ -147,7 +148,7 @@
 
 .jobs-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
   gap: 30px;
 }
 
@@ -402,3 +403,23 @@
 }
 
 
+
+@media (max-width: 480px) {
+  .job-card, .course-card, .gadget-card, .website-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    box-sizing: border-box !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .jobs-section .container {
+    padding: 0 10px !important; /* Reduce container padding to give cards more space */
+  }
+  .job-card {
+    padding: 20px 15px !important; /* Reduce card internal padding so content fits better */
+    margin: 10px auto !important;
+  }
+}

@@ -1,3 +1,4 @@
+*, *::before, *::after { box-sizing: border-box; }
 .websites-page {
   background: #0a0f1e;
   min-height: 100vh;
@@ -107,7 +108,7 @@
 
 .features-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
   gap: 30px;
   text-align: center;
 }
@@ -171,7 +172,7 @@
 
 .templates-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
   gap: 30px;
 }
 
@@ -395,3 +396,13 @@
   }
 }
 
+
+@media (max-width: 480px) {
+  .job-card, .course-card, .gadget-card, .website-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    box-sizing: border-box !important;
+  }
+}
