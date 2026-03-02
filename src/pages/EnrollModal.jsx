@@ -123,7 +123,10 @@ const EnrollModal = ({ course, onClose }) => {
             <p className="success-text">
               Thank you! <span className="glow-text">Admin</span> will contact you soon.
             </p>
-            <button className="success-close-btn" onClick={onClose}>
+            <button className="success-close-btn" onClick={() => {
+              setShowSuccess(false);
+              onClose();
+            }}>
               CLOSE
             </button>
             <div className="success-glow"></div>

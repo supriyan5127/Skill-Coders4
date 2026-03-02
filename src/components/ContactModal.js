@@ -103,6 +103,13 @@ const ContactModal = ({ isOpen, onClose }) => {
             <p className="success-text">
               Thank you! <span className="glow-text">Admin</span> will contact you soon.
             </p>
+            <button className="success-close-btn" onClick={() => {
+              setShowSuccess(false);
+              setFormData({ fullName: '', email: '', phone: '', message: '' });
+              onClose();
+            }}>
+              CLOSE
+            </button>
             <div className="success-glow"></div>
           </div>
         ) : (
