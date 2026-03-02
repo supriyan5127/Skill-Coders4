@@ -38,7 +38,7 @@
 
 .nav a:hover {
   color: #007bff;
-}\n
+}
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
   .nav ul { gap: 15px; }
@@ -48,5 +48,5 @@
   .header-container { flex-direction: column; gap: 15px; }
   .nav ul { flex-wrap: wrap; justify-content: center; }
 }
-\n
+
 

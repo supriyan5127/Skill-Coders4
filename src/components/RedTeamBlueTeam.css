@@ -343,7 +343,7 @@
   .team { max-width: 100%; }
   .prize { font-size: 18px; padding: 15px 30px; }
   .cyber-battle .btn { font-size: 20px; padding: 14px 40px; }
-}\n
+}
 /* ===== ADDITIONAL RESPONSIVE ===== */
 @media (max-width: 1024px) {
   .teams-container { gap: 30px; }
@@ -357,5 +357,5 @@
   .team h3 { font-size: 28px; }
   .team p { font-size: 14px; }
 }
-\n
+
 

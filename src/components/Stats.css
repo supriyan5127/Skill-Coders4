@@ -23,7 +23,7 @@
 .stat-item p {
   font-size: 18px;
   color: #666;
-}\n
+}
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
   .stats-container { gap: 20px; }
@@ -35,5 +35,5 @@
   .stat-item h3 { font-size: 32px; }
   .stat-item p { font-size: 14px; }
 }
-\n
+
 

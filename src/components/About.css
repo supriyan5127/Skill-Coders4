@@ -262,7 +262,7 @@
   .about p {
     font-size: 16px;
   }
-}\n
+}
 /* ===== ADDITIONAL RESPONSIVE ===== */
 @media (max-width: 1024px) {
   .about h3 { font-size: 36px; }
@@ -274,5 +274,5 @@
   .content-card { padding: 25px 15px; }
   .about p { font-size: 15px; }
 }
-\n
+
 
