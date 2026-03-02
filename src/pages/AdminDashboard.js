@@ -62,7 +62,7 @@ const AdminDashboard = () => {
     const handleDelete = async (id) => {
         try {
             // Determine the correct collection name
-            const targetCollection = activeTab === 'contact_messages' ? 'contact_messages' : activeTab;
+            const targetCollection = (activeTab === 'contact_messages' || activeTab === 'enrollments') ? activeTab : activeTab;
             await deleteDoc(doc(db, targetCollection, id));
             setData(data.filter(item => item.id !== id));
             alert("Message deleted successfully!");
@@ -188,13 +188,19 @@ const AdminDashboard = () => {
                 >
                     View Messages
                 </button>
+                <button
+                    className={activeTab === 'enrollments' ? 'active' : ''}
+                    onClick={() => setActiveTab('enrollments')}
+                >
+                    View Enrollments
+                </button>
             </div>
 
             <div className="admin-content">
                 <div className="admin-header">
-                    <h1>{activeTab === 'contact_messages' ? 'Contact Inquiries' : activeTab.charAt(0).toUpperCase() + activeTab.slice(1) + ' Management'}</h1>
+                    <h1>{activeTab === 'contact_messages' ? 'Contact Inquiries' : activeTab === 'enrollments' ? 'Enrollments & Course Applications' : activeTab.charAt(0).toUpperCase() + activeTab.slice(1) + ' Management'}</h1>
                     <div>
-                        {activeTab !== 'contact_messages' && (
+                        {activeTab !== 'contact_messages' && activeTab !== 'enrollments' && (
                             <button className="add-btn" onClick={() => handleOpenModal()}>+ Add New</button>
                         )}
                     </div>
@@ -214,6 +220,14 @@ const AdminDashboard = () => {
                                             <th>Message</th>
                                             <th>Actions</th>
                                         </>
+                                    ) : activeTab === 'enrollments' ? (
+                                        <>
+                                            <th>Name</th>
+                                            <th>Contact Info</th>
+                                            <th>Course/Item</th>
+                                            <th>Message</th>
+                                            <th>Actions</th>
+                                        </>
                                     ) : (
                                         <>
                                             <th>Title/Name</th>
@@ -226,8 +240,8 @@ const AdminDashboard = () => {
                             <tbody>
                                 {data.length === 0 ? (
                                     <tr>
-                                        <td colSpan={activeTab === 'contact_messages' ? "4" : "3"}>
-                                            {activeTab === 'contact_messages' ? "No messages found." : "No records found. Please migrate data to Firebase."}
+                                        <td colSpan={activeTab === 'contact_messages' ? "4" : activeTab === 'enrollments' ? "5" : "3"}>
+                                            {activeTab === 'contact_messages' || activeTab === 'enrollments' ? "No messages found." : "No records found. Please migrate data to Firebase."}
                                         </td>
                                     </tr>
                                 ) : (
@@ -240,6 +254,19 @@ const AdminDashboard = () => {
                                                         <div>{item.email}</div>
                                                         <div style={{ fontSize: '0.85em', color: '#ccc' }}>{item.phone}</div>
                                                     </td>
+                                                    <td style={{ maxWidth: '300px' }}>{item.message}</td>
+                                                    <td>
+                                                        <button className="delete-btn" onClick={() => handleDelete(item.id)}>Delete</button>
+                                                    </td>
+                                                </>
+                                            ) : activeTab === 'enrollments' ? (
+                                                <>
+                                                    <td>{item.fullName}</td>
+                                                    <td>
+                                                        <div>{item.email}</div>
+                                                        <div style={{ fontSize: '0.85em', color: '#ccc' }}>{item.phone}</div>
+                                                    </td>
+                                                    <td style={{ maxWidth: '200px' }}>{item.course}</td>
                                                     <td style={{ maxWidth: '300px' }}>{item.message}</td>
                                                     <td>
                                                         <button className="delete-btn" onClick={() => handleDelete(item.id)}>Delete</button>

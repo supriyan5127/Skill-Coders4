@@ -358,18 +358,4 @@
   .team p { font-size: 14px; }
 }
 \n
-/* ===== GLOBAL MOBILE OVERFLOW FIX ===== */
-@media (max-width: 480px) {
-  .container, 
-  [class*="-container"], 
-  section,
-  .hero,
-  .footer,
-  .cyber-battle,
-  .about {
-    width: 100% !important;
-    max-width: 100vw !important;
-    overflow-x: hidden !important;
-    box-sizing: border-box !important;
-  }
-}
+
